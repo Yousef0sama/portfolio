@@ -136,7 +136,7 @@ body {
 }
 
 .home {
-  min-height: 150vh;
+  min-height: 130vh;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -180,7 +180,7 @@ body {
 }
 
 .about {
-  min-height: 150vh;
+  min-height: 130vh;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -254,7 +254,7 @@ body {
 }
 
 .skills {
-  min-height: 150vh;
+  min-height: 130vh;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -309,7 +309,7 @@ body {
 }
 
 .services {
-  min-height: 150vh;
+  min-height: 130vh;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -366,7 +366,7 @@ body {
 }
 
 .portfolio {
-  min-height: 150vh;
+  min-height: 130vh;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -439,7 +439,7 @@ body {
 }
 
 .contact {
-  min-height: 150vh;
+  min-height: 130vh;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
