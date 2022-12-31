@@ -1,0 +1,835 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+* {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  font-family: "Tajawal", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.light-mode {
+  background-color: rgb(240, 240, 240);
+  color: rgb(60, 60, 60) !important;
+}
+
+.dark-mode {
+  background-color: rgb(0, 17, 45);
+  color: rgb(255, 255, 255) !important;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+.nav {
+  padding: 50px;
+  position: absolute;
+  z-index: 1;
+}
+.nav span {
+  margin-right: 0px;
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  padding-top: 12px;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.14), 3px 3px 5px inset rgb(255, 255, 255);
+}
+.nav span:hover {
+  color: rgb(55, 132, 255);
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.14), -3px -3px 5px inset rgba(0, 0, 0, 0.14), 0px 0px 0px transparent;
+}
+.nav .X {
+  display: none;
+}
+.nav .X:hover {
+  color: rgb(182, 10, 10);
+}
+.nav .mode {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px transparent, 0px 0px 0px inset transparent;
+}
+.nav .mode:hover {
+  box-shadow: 0px 0px 0px transparent, 0px 0px 0px inset transparent;
+}
+.nav .mode span {
+  margin-left: -10px;
+}
+.nav .mode .light {
+  display: none;
+}
+.nav .menu {
+  margin-top: -110px;
+  margin-left: 60px;
+  overflow: hidden;
+  height: 0px;
+  width: 0px;
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.14), -3px -3px 5px inset rgba(0, 0, 0, 0.14), 0px 0px 0px transparent;
+  background-color: rgb(240, 240, 240);
+  padding: 0px;
+  border-radius: 20px;
+}
+.nav .menu .links {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.nav .menu .links a {
+  color: rgb(60, 60, 60);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 25px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.14), 3px 3px 5px inset rgb(255, 255, 255);
+}
+.nav .menu .links a:hover {
+  color: rgb(55, 132, 255);
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.14), -3px -3px 5px inset rgba(0, 0, 0, 0.14), 0px 0px 0px transparent;
+  text-decoration: none;
+}
+.nav .menu .links a:focus {
+  text-decoration: none;
+}
+
+.dark-mode .nav span {
+  background-color: rgb(0, 17, 45);
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.3), 3px 3px 5px inset rgba(255, 255, 255, 0.1);
+}
+.dark-mode .nav span:hover {
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.3), -3px -3px 5px inset rgba(0, 0, 0, 0.3), 0px 0px 0px transparent;
+}
+.dark-mode .nav .mode {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px transparent, 0px 0px 0px inset transparent;
+}
+.dark-mode .nav .mode:hover {
+  box-shadow: 0px 0px 0px transparent, 0px 0px 0px inset transparent;
+}
+.dark-mode .nav .menu {
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.3), -3px -3px 5px inset rgba(0, 0, 0, 0.3), 0px 0px 0px transparent;
+  background-color: rgb(0, 17, 45);
+}
+.dark-mode .nav .menu .links a {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 17, 45);
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.3), 3px 3px 5px inset rgba(255, 255, 255, 0.1);
+}
+.dark-mode .nav .menu .links a:hover {
+  color: rgb(55, 132, 255);
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.3), -3px -3px 5px inset rgba(0, 0, 0, 0.3), 0px 0px 0px transparent;
+}
+
+.home {
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.home .container div .text {
+  padding-top: 25%;
+}
+.home .container div .text h1 {
+  color: rgb(55, 132, 255);
+}
+.home .container div .text .btns a {
+  background-color: rgb(55, 132, 255);
+  color: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.home .container div .text .btns a:hover {
+  background-color: rgb(25, 99, 219);
+}
+.home .container div .img {
+  padding-top: 17%;
+}
+.home .container div .img .bg {
+  display: block;
+  position: absolute;
+  right: 8%;
+  background-color: rgb(55, 132, 255);
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 300px;
+  max-height: 400px;
+  border-radius: 51% 49% 55% 45%/34% 32% 68% 66%;
+  overflow: hidden;
+  padding-top: 40px;
+}
+.home .container div .img .bg img {
+  min-width: 320px;
+  max-width: 420px;
+}
+
+.about {
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.about .container .head div h1 {
+  text-align: center;
+  color: rgb(55, 132, 255);
+  padding-top: 30px;
+}
+.about .container .body .img {
+  padding-top: 8%;
+}
+.about .container .body .img .bg {
+  border-radius: 5%;
+  overflow: hidden;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-shadow: 9px 9px 1px rgba(0, 0, 0, 0.14);
+  float: right;
+  margin-right: 20px;
+}
+.about .container .body .img .bg img {
+  min-width: 300px;
+  max-width: 300px;
+}
+.about .container .body .text {
+  padding-top: 7.5%;
+}
+.about .container .body .text .par {
+  min-width: 300px;
+  max-width: 400px;
+  width: 90%;
+  font-size: 25px;
+  font-weight: 100;
+}
+.about .container .body .text .info div div {
+  min-width: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.about .container .body .text .info div div span {
+  font-size: 27px;
+  display: inline-block;
+  margin-left: 16%;
+  font-weight: 700;
+}
+.about .container .body .text .info div div p {
+  margin-left: -14%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+}
+.about .container .body .text .btns a {
+  background-color: rgb(55, 132, 255);
+  color: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+  font-size: 22px;
+}
+.about .container .body .text .btns a:hover {
+  background-color: rgb(25, 99, 219);
+}
+.about .container .body .text .btns a span {
+  margin-left: 15px;
+}
+
+.dark-mode .about .body .img .bg {
+  box-shadow: none;
+}
+
+.skills {
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.skills .container .head div {
+  padding-top: 40px;
+}
+.skills .container .head div h1 {
+  text-align: center;
+  color: rgb(55, 132, 255);
+}
+.skills .container .body div {
+  padding-top: 80px;
+}
+.skills .container .body div h3 span {
+  font-weight: 700;
+  color: rgb(55, 132, 255);
+  font-size: 28px;
+  margin: 0 15px;
+}
+.skills .container .body div h3 .up-a, .skills .container .body div h3 .up-b {
+  display: none;
+}
+.skills .container .body div h3 .up-a, .skills .container .body div h3 .up-b, .skills .container .body div h3 .down-a, .skills .container .body div h3 .down-b {
+  float: right;
+  cursor: pointer;
+}
+.skills .container .body div ul {
+  list-style-type: none;
+  padding-left: 5%;
+  font-size: 20px;
+  font-weight: 600;
+  display: none;
+}
+.skills .container .body div ul span {
+  background-color: rgb(172, 204, 255);
+  width: 100%;
+  max-width: 500px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 10px;
+}
+.skills .container .body div ul span p {
+  max-width: 500px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(55, 132, 255);
+}
+.skills .container .body div ul d {
+  position: absolute;
+  right: 8%;
+}
+
+.services {
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.services .head div {
+  padding-top: 30px;
+  text-align: center;
+}
+.services .head div h1 {
+  color: rgb(55, 132, 255);
+}
+.services .body div div {
+  text-align: center;
+  width: 100%;
+  height: 250px;
+  padding: 60px;
+  margin-top: 20px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.14), 3px 3px 5px inset rgb(255, 255, 255);
+}
+.services .body div div:hover {
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.14), -3px -3px 5px inset rgba(0, 0, 0, 0.14), 0px 0px 0px transparent;
+}
+.services .body div div:hover span {
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.14), 3px 3px 5px inset rgb(255, 255, 255);
+}
+.services .body div div span {
+  color: rgb(55, 132, 255);
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  padding-top: 13px;
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.14), -3px -3px 5px inset rgba(0, 0, 0, 0.14), 0px 0px 0px transparent;
+}
+.services .body div div p {
+  padding: 10px;
+  font-size: 25px;
+  color: rgb(55, 132, 255);
+}
+
+.dark-mode .services .body div div {
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.3), 3px 3px 5px inset rgba(255, 255, 255, 0.1);
+}
+.dark-mode .services .body div div:hover {
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.3), -3px -3px 5px inset rgba(0, 0, 0, 0.3), 0px 0px 0px transparent;
+}
+.dark-mode .services .body div div:hover span {
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.3), 3px 3px 5px inset rgba(255, 255, 255, 0.1);
+}
+.dark-mode .services .body div div span {
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.3), -3px -3px 5px inset rgba(0, 0, 0, 0.3), 0px 0px 0px transparent;
+}
+
+.portfolio {
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.portfolio .container .head {
+  text-align: center;
+}
+.portfolio .container .head h1 {
+  color: rgb(55, 132, 255);
+  padding: 40px;
+}
+.portfolio .container .body .arrows {
+  padding-top: 160px;
+}
+.portfolio .container .body .arrows span {
+  color: rgb(55, 132, 255);
+  font-size: 32px;
+  display: inline-block;
+  cursor: pointer;
+}
+.portfolio .container .body div div .img img {
+  max-width: 380px;
+  margin-top: 100px;
+  box-shadow: 9px 9px 1px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+}
+.portfolio .container .body div div .caption {
+  margin-top: 120px;
+  max-width: 380px;
+  min-width: 100px;
+  width: 90%;
+}
+.portfolio .container .body div div .caption a {
+  color: rgb(255, 255, 255);
+  background-color: rgb(55, 132, 255);
+  border-radius: 5px;
+  width: 100px;
+  font-size: 22px;
+  padding: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+}
+.portfolio .container .body div div .caption a:hover {
+  text-decoration: none;
+  background-color: rgb(25, 99, 219);
+}
+.portfolio .container .body div div .caption a:focus {
+  text-decoration: none;
+}
+.portfolio .container .body div #b {
+  display: none;
+}
+.portfolio .container .body div #c {
+  display: none;
+}
+.portfolio .container .body div .circls div {
+  text-align: center;
+}
+.portfolio .container .body div .circls div i {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 3px solid rgb(55, 132, 255);
+  display: inline-block;
+  margin-top: 10%;
+}
+.portfolio .container .body div .circls div .active {
+  background-color: rgb(55, 132, 255);
+}
+
+.contact {
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 280px;
+}
+.contact .container .head div {
+  text-align: center;
+  padding: 30px;
+}
+.contact .container .head div h1 {
+  color: rgb(55, 132, 255);
+}
+.contact .container .body .form {
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.14), -3px -3px 5px inset rgba(0, 0, 0, 0.14), 0px 0px 0px transparent;
+}
+.contact .container .body .form form .row div {
+  padding: 20px 20px;
+}
+.contact .container .body .form form .row div input, .contact .container .body .form form .row div textarea {
+  width: 100%;
+  border-radius: 25px;
+  background-color: transparent;
+  padding: 10px;
+  padding-left: 25px;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.14), 3px 3px 5px inset rgb(255, 255, 255);
+  font-size: 20px;
+  resize: none;
+}
+.contact .container .body .form form .row div input:hover, .contact .container .body .form form .row div textarea:hover {
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.14), -3px -3px 5px inset rgba(0, 0, 0, 0.14), 0px 0px 0px transparent;
+}
+.contact .container .body .form form .row div input:focus, .contact .container .body .form form .row div textarea:focus {
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.14), -3px -3px 5px inset rgba(0, 0, 0, 0.14), 0px 0px 0px transparent;
+}
+.contact .container .body .form form .row div textarea {
+  height: 200px;
+}
+.contact .container .body .form form .row div .send {
+  background-color: rgb(55, 132, 255);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  box-shadow: none;
+}
+.contact .container .body .form form .row div .send:hover {
+  background-color: rgb(25, 99, 219);
+  box-shadow: none;
+}
+
+.dark-mode .contact .body .form {
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.3), -3px -3px 5px inset rgba(0, 0, 0, 0.3), 0px 0px 0px transparent;
+}
+.dark-mode .contact .body .form form .row div input, .dark-mode .contact .body .form form .row div textarea {
+  box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.3), 3px 3px 5px inset rgba(255, 255, 255, 0.1);
+}
+.dark-mode .contact .body .form form .row div input:hover, .dark-mode .contact .body .form form .row div textarea:hover {
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.3), -3px -3px 5px inset rgba(0, 0, 0, 0.3), 0px 0px 0px transparent;
+}
+.dark-mode .contact .body .form form .row div input:focus, .dark-mode .contact .body .form form .row div textarea:focus {
+  box-shadow: 3px 3px 5px inset rgba(0, 0, 0, 0.3), -3px -3px 5px inset rgba(0, 0, 0, 0.3), 0px 0px 0px transparent;
+}
+
+/* for laptop */
+@media screen and (min-width: 1350px) {
+  .home .container .row .text {
+    margin-left: -100%;
+  }
+  .home .container .row .img {
+    margin-left: 45%;
+    margin-right: 0%;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .home .container .row .text {
+    margin-left: -95%;
+  }
+  .home .container .row .img {
+    margin-left: 45%;
+    margin-right: 0%;
+  }
+}
+/* for small laptop */
+@media screen and (max-width: 1200px) {
+  .home .container .row {
+    padding-top: 15%;
+  }
+  .home .container .row .text {
+    margin-left: -100%;
+  }
+  .home .container .row .img {
+    margin-left: 45%;
+    margin-right: 0%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .home .container .row {
+    padding-top: 15%;
+  }
+  .home .container .row .text {
+    margin-left: -90%;
+  }
+  .home .container .row .img {
+    margin-left: 40%;
+    margin-right: 0%;
+  }
+}
+/* for tablet */
+@media screen and (max-width: 992px) {
+  .home .container .row {
+    padding-top: 15%;
+  }
+  .home .container .row .text {
+    margin-left: -110%;
+  }
+  .home .container .row .text .btns a {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .home .container .row .img {
+    margin-left: 50%;
+    margin-right: 0%;
+  }
+  .portfolio .container .body .arrows {
+    padding-top: 300px;
+  }
+  .portfolio .container .body .arrows .left {
+    margin-left: 20px;
+  }
+  .portfolio .container .body .arrows .right {
+    margin-left: -40px;
+  }
+  .portfolio .container .body div {
+    position: relative;
+  }
+  .portfolio .container .body div .row {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .portfolio .container .body div .circls {
+    margin-top: 310px;
+  }
+}
+@media screen and (max-width: 891px) {
+  .home .container .row {
+    padding-top: 15%;
+  }
+  .home .container .row .text {
+    margin-left: -100%;
+  }
+  .home .container .row .img {
+    margin-left: 45%;
+  }
+  .services .container .body {
+    position: relative;
+  }
+  .services .container .body .div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+/* for mobile */
+@media screen and (max-width: 767px) {
+  .nav {
+    padding: 15px;
+  }
+  .nav .mode {
+    margin-top: -13px;
+  }
+  .nav .menu {
+    margin-top: 10px;
+    margin-left: -100px;
+  }
+  .home .container .row {
+    padding-top: 0px;
+  }
+  .home .container .row .text {
+    margin-left: 0px;
+    margin-right: 0px;
+    left: 0px;
+    right: 0px;
+    margin-top: 400px;
+    padding-top: 0px;
+    position: relative;
+  }
+  .home .container .row .text .center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .home .container .row .text .center .btns {
+    margin-top: 0px;
+  }
+  .home .container .row .img {
+    margin-left: 0px;
+    margin-right: 0px;
+    left: 0px;
+    right: 0px;
+    display: block;
+    position: relative;
+  }
+  .home .container .row .img .bg {
+    right: 0%;
+    min-width: 400px;
+    max-height: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .about .container .body .img {
+    position: relative;
+    padding-top: 4%;
+  }
+  .about .container .body .img .bg {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .about .container .body .text {
+    position: relative;
+    padding-top: 350px;
+  }
+  .about .container .body .text .txt {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 50px;
+  }
+  .about .container .body .text .txt .par {
+    width: 100%;
+  }
+  .skills .container .body div h3 .up-a, .skills .container .body div h3 .up-b, .skills .container .body div h3 .down-a, .skills .container .body div h3 .down-b {
+    margin-right: 30%;
+  }
+  .services .container .body {
+    position: relative;
+  }
+  .services .container .body div {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .services .container .body div div {
+    max-width: 400px;
+  }
+  .portfolio .container .body .arrows {
+    padding-top: 300px;
+  }
+  .portfolio .container .body .arrows .left {
+    margin-left: 20px;
+  }
+  .portfolio .container .body .arrows .right {
+    margin-left: -40px;
+  }
+  .portfolio .container .body div {
+    position: relative;
+  }
+  .portfolio .container .body div .row {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .portfolio .container .body div .circls {
+    margin-top: 310px;
+  }
+  .contact .container .body {
+    position: relative;
+  }
+  .contact .container .body .form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 650px) {
+  .home .container .row .text .center .btns a {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .about .container .body .text .txt {
+    padding-left: 40px;
+  }
+  .skills .container .body div h3 .up-a, .skills .container .body div h3 .up-b, .skills .container .body div h3 .down-a, .skills .container .body div h3 .down-b {
+    margin-right: 20%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .home .container .row {
+    padding-top: 50px;
+  }
+  .home .container .row .text {
+    margin-top: 350px;
+  }
+  .home .container .row .text .center .btns a {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .home .container .row .img .bg {
+    right: 0%;
+    min-width: 350px;
+    max-height: 350px;
+  }
+  .home .container .row .img .bg img {
+    max-width: 370px;
+  }
+  .about .container .body .text .txt {
+    padding-left: 30px;
+  }
+  .skills .container .body div h3 .up-a, .skills .container .body div h3 .up-b, .skills .container .body div h3 .down-a, .skills .container .body div h3 .down-b {
+    margin-right: 10%;
+  }
+  .services .container .body div div {
+    max-width: 350px;
+    min-width: 350px;
+  }
+  .portfolio .container .body .arrows {
+    padding-top: 320px;
+  }
+  .portfolio .container .body div div {
+    padding-left: 20px;
+  }
+  .portfolio .container .body div div .img img {
+    max-width: 300px;
+    margin-top: 150px;
+  }
+  .portfolio .container .body div div .caption {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .home .container .row {
+    padding-top: 100px;
+  }
+  .home .container .row .text {
+    margin-top: 300px;
+    left: 0%;
+    right: 0%;
+  }
+  .home .container .row .img {
+    left: 0%;
+    right: 0%;
+  }
+  .home .container .row .img .bg {
+    min-width: 300px;
+    max-height: 300px;
+  }
+  .home .container .row .img .bg img {
+    width: 320px;
+  }
+  .skills .container .body div h3 .up-a, .skills .container .body div h3 .up-b, .skills .container .body div h3 .down-a, .skills .container .body div h3 .down-b {
+    margin-right: 5%;
+  }
+  .services .container .body div div {
+    max-width: 300px;
+    min-width: 300px;
+  }
+  .portfolio .container .body .arrows {
+    padding-top: 310px;
+  }
+  .portfolio .container .body div div {
+    padding-left: 20px;
+  }
+  .portfolio .container .body div div .img img {
+    max-width: 270px;
+    margin-top: 160px;
+  }
+  .portfolio .container .body div div .caption {
+    max-width: 250px;
+  }
+  .portfolio .container .body div .circls {
+    margin-top: 320px;
+  }
+}
+/* resposive height */
+@media screen and (max-height: 700px) and (max-width: 400px) {
+  .home .container .row {
+    padding-top: 0px;
+    margin-top: 10px;
+  }
+  .about, .portfolio {
+    height: 220vh;
+  }
+}
+@media screen and (max-height: 700px) and (min-width: 900px) {
+  .home .container .row {
+    padding-top: 0px;
+    margin-top: -80px;
+  }
+}/*# sourceMappingURL=style.css.map */

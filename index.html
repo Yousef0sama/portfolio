@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- css files -->
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- js files -->
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+
+    <title>portfolio</title>
+</head>
+
+<body>
+
+
+    <div class="nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-xs-6">
+                    <span class="bars"> <i class="fa-solid fa-bars"></i> </span>
+                    <span class="X"> <i class="fa-solid fa-close"></i> </span>
+                </div>
+                <div class="col-sm-12 col-xs-6">
+                    <span class="mode">
+                        <span class="dark"><i class="fa-solid fa-moon"></i></span>
+                        <span class="light"><i class="fa-solid fa-sun"></i></span>
+                    </span>
+                    <div class="menu">
+                        <div class="links row">
+                            <a href="#home" class="col-xs-12">Home</a>
+                            <a href="#about" class="col-xs-12">About</a>
+                            <a href="#skills" class="col-xs-12">Skills</a>
+                            <a href="#services" class="col-xs-12">Services</a>
+                            <a href="#portfolio" class="col-xs-12">Portfolio</a>
+                            <a href="#contact" class="col-xs-12">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="home" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 col-xs-12 img">
+                    <div class="bg">
+                        <img src="media/images/banner.png" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-5 col-xs-12 text">
+                    <div class="center">
+                        <h1>Hello, Glad to see you.</h1>
+                        <h3>I'm Yousef full stack developer.</h3>
+                        <br>
+                        <div class="btns">
+                            <a href="#about" class="btn btn-default" role="button">READ MORE</a>
+                            <a href="#contact" class="btn btn-default" role="button">TAKE ACTION</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row head">
+                <div class="col-xs-12">
+                    <h1>About Me</h1>
+                </div>
+            </div>
+            <div class="row body">
+                <div class="col-md-6 col-sm-7 col-xs-12 img">
+                    <div class="bg">
+                        <img src="media/images/banner-b.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-5 col-xs-12 text">
+                    <div class="txt">
+                        <p class="par">
+                            web developer with extensive knowledege and expereince since 2021, working in fornt-end development & backend development.
+                        </p>
+                        <br>
+                        <div class="row info">
+                            <div class="col-xs-4">
+                                <div id="expereince">
+                                    <span id="years"></span>
+                                    <p>years<br>expereince</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div id="projects">
+                                    <span id="proj"></span>
+                                    <p>completed<br>projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="btns">
+                            <a href="media/PDF/CV.pdf" target="_blank" class="btn btn-default" role="button" download>Download CV <span><i class="fa-solid fa-download"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="row head">
+                <div class="col-xs-12">
+                    <h1>Skills</h1>
+                </div>
+            </div>
+            <div class="row body">
+                <div class="col-sm-6 col-xs-12">
+                    <h3> <span class="a">{}</span> Front-end developer <span class="down-a"><i class="fa-solid fa-chevron-down"></i></span> <span class="up-a"><i class="fa-solid fa-chevron-up"></i></span></h3>
+                    <ul class="f">
+                        <li> HTML <d id="html"> 95% </d> <span class="html"> <p id="html-p"></p> </span> </li>
+                        <li> CSS <d id="css"> 95% </d> <span class="css"> <p id="css-p"></p> </span> </li>
+                        <li> SASS <d id="sass"> 90% </d> <span class="sass"> <p id="sass-p"></p> </span> </li>
+                        <li> BootStrap <d id="bs"> 80% </d> <span class="bs"> <p id="bs-p"></p> </span> </li>
+                        <li> JavaScript <d id="js"> 85% </d> <span class="js"> <p id="js-p"></p> </span> </li>
+                        <li> jQuery <d id="jq"> 80% </d> <span class="jq"> <p id="jq-p"></p> </span> </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <h3> <span><i class="fa-solid fa-code"></i></span> Back-end developer <span class="down-b"><i class="fa-solid fa-chevron-down"></i></span> <span class="up-b"><i class="fa-solid fa-chevron-up"></i></span></h3></h3>
+                    <ul class="b">
+                        <li> PHP <d id="php"> 85% </d> <span class="php"> <p id="php-p"></p> </span> </li>
+                        <li> MySQL <d id="mysql"> 80% </d> <span class="mysql"> <p id="mysql-p"></p> </span> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="row head">
+                <div class="col-xs-12">
+                    <h1>services</h1>
+                </div>
+            </div>
+            <div class="row body">
+                <div class="col-sm-6 col-xs-12">
+                    <div>
+                        <span><i class="fa-solid fa-code"></i></span>
+                        <p>Front-end</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div>
+                        <span><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                        <p>Back-end</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div>
+                        <span><i class="fa-solid fa-mobile-screen-button"></i></span>
+                        <p>resposive</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div>
+                        <span><i class="fa-solid fa-paintbrush"></i></span>
+                        <p>redsign</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="row head">
+                <div class="col-xs-12">
+                    <h1>portfolio</h1>
+                </div>
+            </div>
+            <div class="row body">
+                <div class="col-xs-1 arrows">
+                    <span class="left">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </span>
+                </div>
+                <div class="col-xs-10">
+                    <div class="row" id="a">
+                        <div class="col-md-6 col-sm-12 img">
+                            <img src="media/images/projects/coming_soon.png" alt="">
+                        </div>
+                        <div class="col-md-6 col-sm-12 caption">
+                            <h1>Landing page</h1>
+                            <p>resposive website work on all devices, langs used : HTML5 - CSS3 - Bootstrap - SASS</p>
+                            <a href="https://yousef0sama.github.io/parachute/" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                    <div class="row" id="b">
+                        <div class="col-md-6 col-sm-12 img">
+                            <img src="media/images/projects/demo.png" alt="">
+                        </div>
+                        <div class="col-md-6 col-sm-12 caption">
+                            <h1>request page</h1>
+                            <p>resposive website work on all devices, langs used : HTML5 - CSS3 - Bootstrap - SASS</p>
+                            <a href="https://yousef0sama.github.io/request_demo/" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                    <div class="row" id="c">
+                        <div class="col-md-6 col-sm-8 col-xs-12 img">
+                            <img src="media/images/projects/dura.png" alt="">
+                        </div>
+                        <div class="col-md-6 col-sm-4 col-xs-12 caption">
+                            <h1>home page</h1>
+                            <p>resposive website work on all devices, langs used : HTML5 - CSS3 - Bootstrap - SASS</p>
+                            <a href="https://yousef0sama.github.io/dura_home_page/" target="_blank">Demo</a>
+                        </div>
+                    </div>
+                    <div class="row circls">
+                        <div class="col-xs-12">
+                            <i id="aa" class="active"></i>
+                            <i id="bb"></i>
+                            <i id="cc"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-1 arrows">
+                    <span class="right">
+                        <i class="fa-solid fa-angle-right"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row head">
+                <div class="col-xs-12">
+                    <h1>Contact Me</h1>
+                </div>
+            </div>
+            <div class="row body">
+                <div class="col-md-2 col-xs-1"></div>
+                <div class="col-md-8 col-xs-10 form">
+                    <form action="#" method="post">
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12">
+                                <input type="text" name="Fname" id="Fname" class="Fname" placeholder="First Name">
+                            </div>
+                            <div class="col-sm-6 col-xs-12">
+                                <input type="text" name="Lname" id="Lname" class="Lname" placeholder="Last Name">
+                            </div>
+                            <div class="col-xs-12">
+                                <input type="email" name="mail" id="mail" class="mail" placeholder="E-mail">
+                            </div>
+                            <div class="col-xs-12">
+                                <textarea name="msg" id="msg" class="msg" placeholder="msg"></textarea>
+                            </div>
+                            <div class="col-xs-12">
+                                <input type="submit" value="Send" class="send" id="send" name="send">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2 col-xs-1"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- js files -->
+
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/core.js"></script>
+
+</body>
+</html>
+
