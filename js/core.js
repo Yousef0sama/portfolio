@@ -1,7 +1,7 @@
 $(function(){
 
     $(window).scroll(function(){
-        $(".nav").css({"margin-top": ($(window).scrollTop() + 30) + "px", "margin-left":($(window).scrollLeft()) + "px"}, );
+        $(".nav").css({"margin-top": ($(window).scrollTop()) + "px", "margin-left":($(window).scrollLeft()) + "px"}, );
     });
 
     $(".bars").click(function () { 
