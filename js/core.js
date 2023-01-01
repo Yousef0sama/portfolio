@@ -77,7 +77,7 @@ $(function(){
     $("#json-p").css("width", $("#json").text());
     $("#php-p").css("width", $("#php").text());
     $("#mysql-p").css("width", $("#mysql").text());
-    $("#api-p").css("width", $("#api").text());
+    $("#API-p").css("width", $("#API").text());
 
     $(".left").click(function () {
         if ($("#aa").hasClass("active")) {
