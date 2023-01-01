@@ -74,8 +74,10 @@ $(function(){
     $("#bs-p").css("width", $("#bs").text());
     $("#js-p").css("width", $("#js").text());
     $("#jq-p").css("width", $("#jq").text());
+    $("#json-p").css("width", $("#json").text());
     $("#php-p").css("width", $("#php").text());
     $("#mysql-p").css("width", $("#mysql").text());
+    $("#api-p").css("width", $("#api").text());
 
     $(".left").click(function () {
         if ($("#aa").hasClass("active")) {
