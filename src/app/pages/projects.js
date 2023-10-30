@@ -64,11 +64,10 @@ function Projects() {
             <div className="Card row col col-sm-12">
               <div className="col col-sm-12 Num"> project {proNum + 1} from {projects.projects.length} projects </div>
               <div className="row col-sm-12 pic">
-              <div className="col col-sm-12 Num"> project {phNum + 1} from {projects.projects[proNum].pics.length} projects </div>
                 <div className="col col-sm-12">
                   <div className="np">
                     <span className="right" onClick={() => {RightPh()}}>
-                      <b className="d-none d-md-block">last photh</b>
+                      <b className="d-none d-md-block">last photo</b>
                       <b className="d-sm-block d-md-none"><i className="bi bi-arrow-left"></i></b>
                     </span>
                     <span className="left" onClick={() => {LeftPh()}}>
@@ -77,6 +76,7 @@ function Projects() {
                     </span>
                   </div>
                 </div>
+                <div className="col col-sm-12 Num"> photo {phNum + 1} from {projects.projects[proNum].pics.length} projects </div>
                 <div className="col col-sm-12">
                   <img
                   src= {`./images/gallery/${projects.projects[proNum].name}/${projects.projects[proNum].pics[phNum]}`}
