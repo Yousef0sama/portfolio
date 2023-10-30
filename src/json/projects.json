@@ -2,10 +2,19 @@
     {
         "id"   : 1,
         "name" : "qr code frontend mentor",
-        "des"  : "responsive website with this skills",
+        "des"  : "qr code to go to frontend mentor",
         "lan"  : ["HTML5", "CSS3", "JS", "Scss/Sass", "React", "Next", "Bootstrap"],
-        "pics" : ["desktop-design.png"],
+        "pics" : ["site.png", "responsive.png"],
         "date" : "2023-10-15",
         "link" : "yousef0sama.github.io/qr-code-frontend-mentor/"
+    },
+    {
+        "id"   : 2,
+        "name" : "to do list",
+        "des"  : "to-do list site without database but saves tasks in cookies and display them, skills used",
+        "lan"  : ["HTML5", "CSS3", "JS", "Scss/Sass", "React", "Next", "Bootstrap"],
+        "pics" : ["site.png", "responsive.png"],
+        "date" : "2023-10-30",
+        "link" : "yousef0sama.github.io/to-do-list/"
     }
 ]
