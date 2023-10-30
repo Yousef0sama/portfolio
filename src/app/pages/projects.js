@@ -76,7 +76,7 @@ function Projects() {
                     </span>
                   </div>
                 </div>
-                <div className="col col-sm-12 Num"> photo {phNum + 1} from {projects.projects[proNum].pics.length} projects </div>
+                <div className="col col-sm-12 Num"> photo {phNum + 1} from {projects.projects[proNum].pics.length} photos </div>
                 <div className="col col-sm-12">
                   <img
                   src= {`./images/gallery/${projects.projects[proNum].name}/${projects.projects[proNum].pics[phNum]}`}
