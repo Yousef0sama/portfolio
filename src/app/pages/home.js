@@ -19,6 +19,15 @@ function Home() {
                 <p><span className="colored">front-end</span> and <span className="colored">back-end</span> developer.</p>
                 <br />
                 <span className="btn" onClick={()=>{page.setPage("Contact")}}> contact me </span>
+                <br />
+                <span className="icons">
+                  <span className="float-start">
+                    <a href="https://www.linkedin.com/in/yousef-osama-569677242/" target="_blank"> <i class="bi bi-linkedin"></i> </a>
+                  </span>
+                  <span className="float-end">
+                    <a href="https://github.com/Yousef0sama" target="_blank"> <i class="bi bi-github"></i> </a>
+                  </span>
+                </span>
               </div>
             </div>
           </div>
@@ -50,6 +59,15 @@ function Home() {
                 <p><span className="colored">front-end</span> and <span className="colored">back-end</span> developer.</p>
                 <br />
                 <span className="btn" onClick={()=>{page.setPage("Contact")}}> contact me </span>
+                <br />
+                <span className="icons">
+                  <span className="float-start">
+                    <a href="https://www.linkedin.com/in/yousef-osama-569677242/" target="_blank"> <i class="bi bi-linkedin"></i> </a>
+                  </span>
+                  <span className="float-end">
+                    <a href="https://github.com/Yousef0sama" target="_blank"> <i class="bi bi-github"></i> </a>
+                  </span>
+                </span>
               </div>
             </div>
           </div>

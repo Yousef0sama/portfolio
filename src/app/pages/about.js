@@ -127,6 +127,14 @@ function About() {
                   src="./images/profile.png"
                   alt="profile pic"
                 />
+                <span className="icons">
+                  <span className="float-start">
+                    <a href="https://www.linkedin.com/in/yousef-osama-569677242/" target="_blank"> <i class="bi bi-linkedin"></i> </a>
+                  </span>
+                  <span className="float-end">
+                    <a href="https://github.com/Yousef0sama" target="_blank"> <i class="bi bi-github"></i> </a>
+                  </span>
+                </span>
               </div>
             </div>
 
