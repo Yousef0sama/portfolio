@@ -62,8 +62,9 @@ function Projects() {
               </div>
             </div>
             <div className="Card row col col-sm-12">
-              <div className="col col-sm-12 projectsNum"> project {proNum + 1} from {projects.projects.length} projects </div>
+              <div className="col col-sm-12 Num"> project {proNum + 1} from {projects.projects.length} projects </div>
               <div className="row col-sm-12 pic">
+              <div className="col col-sm-12 Num"> project {phNum + 1} from {projects.projects[proNum].pics.length} projects </div>
                 <div className="col col-sm-12">
                   <div className="np">
                     <span className="right" onClick={() => {RightPh()}}>
@@ -77,17 +78,15 @@ function Projects() {
                   </div>
                 </div>
                 <div className="col col-sm-12">
-                  <img 
+                  <img
                   src= {`./images/gallery/${projects.projects[proNum].name}/${projects.projects[proNum].pics[phNum]}`}
-                  width = {100} 
-                  height = {50}
                   />
                 </div>
               </div>
               <br />
               <div className="name col col-sm-12">  <h3 className="colored">{projects.projects[proNum].name}</h3> </div>
-              <div className="des col col-sm-12">  
-                <p>{projects.projects[proNum].des}</p> 
+              <div className="des col col-sm-12">
+                <p>{projects.projects[proNum].des}</p>
                 <div className="lans">
                   {projects.projects[proNum].lan.map((lan) => {
                     return <p key={lan} className="lan">{lan}</p>
