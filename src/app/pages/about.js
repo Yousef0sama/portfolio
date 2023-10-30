@@ -149,7 +149,7 @@ function About() {
                         <p><span className="ex colored">{`${pro}`}</span> <br /> projects <br /> compeleted </p>
                       </div>
                       <div className="col col-sm-12">
-                        <a href="../pdf/cv.pdf" download>Download CV <span className="float-end"><i className="bi bi-cloud-arrow-down-fill"></i></span></a>
+                        <a href="./pdf/cv.pdf" download="cv.pdf">Download CV <span className="float-end"><i className="bi bi-cloud-arrow-down-fill"></i></span></a>
                       </div>
                     </div>
 
