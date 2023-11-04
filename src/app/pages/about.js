@@ -9,7 +9,7 @@ function About() {
 
   const projects = useContext(ProjectsContext);
 
-  let startDate = 2022,
+  let startDate = 2021,
     currentDate = new Date(),
     date = currentDate.getFullYear() - startDate,
     pro = projects.projects.length;
