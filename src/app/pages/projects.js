@@ -20,7 +20,7 @@ function Projects() {
   }
 
   const LeftPh = () => {
-    if (phNum < projects.projects[0].pics.length - 1) {
+    if (phNum < projects.projects[proNum].pics.length - 1) {
       setPhNum(phNum + 1);
     }
   }
