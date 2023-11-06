@@ -19,17 +19,9 @@ function Contact() {
       alert("please input your E-mail");
       return false
     }
-    if (!mail.includes("@")) {
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(mail)) {
       alert("your E-mail is invailed");
       return false;
-    }
-    if (mail.includes("@") && !mail.includes(".")) {
-      alert("your Email is invailed")
-      return false
-    }
-    if (mail.includes(" ")) {
-      alert("your E-mail is invailed");
-      return false
     }
     if (header.length === 0) {
       alert("please input mail header");
