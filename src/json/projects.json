@@ -4,17 +4,26 @@
         "name" : "qr code frontend mentor",
         "des"  : "qr code to go to frontend mentor",
         "lan"  : ["HTML5", "CSS3", "JS", "Scss/Sass", "React", "Next", "Bootstrap"],
-        "pics" : ["site.png", "responsive.png"],
+        "pics" : ["site.png"],
         "date" : "2023-10-15",
         "link" : "yousef0sama.github.io/qr-code-frontend-mentor/"
     },
     {
         "id"   : 2,
         "name" : "to do list",
-        "des"  : "to-do list site without database but saves tasks in cookies and display them, skills used",
+        "des"  : "A Next.js To-Do List project is an efficient web application designed for streamlined task management. Built with Next.js, it offers a user-friendly interface for easy task creation, editing, categorization, and prioritization. The project can be enhanced with optional collaboration features, making it valuable for individuals and teams. With mobile responsiveness and a focus on productivity, it simplifies task management and showcases web development expertise.",
         "lan"  : ["HTML5", "CSS3", "JS", "Scss/Sass", "React", "Next", "Bootstrap"],
-        "pics" : ["site.png", "responsive.png"],
+        "pics" : ["site.png"],
         "date" : "2023-10-30",
         "link" : "yousef0sama.github.io/to-do-list/"
+    },
+    {
+        "id"   : 3,
+        "name" : "multi step form frontend mentor",
+        "des"  : "This project involved creating a three-step multi-step form to streamline the process of collecting user information. It includes features like input validation, clear step indicators, and the ability to navigate between steps. The goal was to enhance the user experience during data entry., skills used",
+        "lan"  : ["HTML5", "CSS3", "JS", "Scss/Sass", "React", "Next", "Bootstrap"],
+        "pics" : ["step-1.png", "step-2.png", "step-3.png", "step-4.png", "step-5.png"],
+        "date" : "2023-11-06",
+        "link" : "https://yousef0sama.github.io/multi-step-form-frontend-mentor/"
     }
 ]
