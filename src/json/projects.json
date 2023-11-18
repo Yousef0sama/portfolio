@@ -14,8 +14,8 @@
         "des"  : "Designed and developed an interactive web application that integrates real-time data from the Rest Countries API. The project features a Color Theme Switcher, allowing users to personalize their browsing experience. This initiative showcased my proficiency in API integration, user interface design, and responsiveness. Notable features include an interactive map for visual exploration and a focus on delivering both educational content and an engaging user experience. ",
         "lan"  : ["HTML5", "CSS3", "JS", "Scss/Sass", "React", "Next", "Bootstrap", "API"],
         "pics" : ["home.png", "homeDark.png", "details.png", "detailsDark.png"],
-        "date" : "2023-10-30",
-        "link" : "yousef0sama.github.io/to-do-list/"
+        "date" : "2023-11-15",
+        "link" : "https://yousef0sama.github.io/rest-countries-api-frontend-mentor/"
     },
     {
         "id"   : 3,
