@@ -2,16 +2,21 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+// Geist font
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
+// Geist Mono font
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
+// Metadata
 export const metadata: Metadata = {
   metadataBase: process.env.NEXT_PUBLIC_SITE_URL
     ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
@@ -27,8 +32,6 @@ export const metadata: Metadata = {
     "web developer",
     "React developer",
     "Next.js developer",
-    "TypeScript",
-    "JavaScript",
     "UI/UX",
     "portfolio",
     "web development",
@@ -52,14 +55,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "/",
+    url: process.env.NEXT_PUBLIC_SITE_URL || undefined,
     siteName: "Yousef Osama - Frontend Developer Portfolio",
     title: "Frontend Developer Portfolio | Yousef Osama",
     description:
       "Frontend developer specializing in React, Next.js, TypeScript, and modern web technologies. View my portfolio of projects and experience.",
     images: [
       {
-        url: "/og-image.jpg", // Add your OG image path
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Yousef Osama - Frontend Developer Portfolio",
@@ -71,17 +74,21 @@ export const metadata: Metadata = {
     title: "Frontend Developer Portfolio | Yousef Osama",
     description:
       "Frontend developer specializing in React, Next.js, TypeScript, and modern web technologies.",
-    creator: "@yourtwitter", // Add your Twitter handle
-    images: ["/og-image.jpg"], // Add your OG image path
+    images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "/",
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || undefined,
   },
   category: "Portfolio",
   classification: "Frontend Development Portfolio",
   other: {
-    "theme-color": "#000000", // Set your brand color
+    "theme-color": "#0080FF",
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico"
+  }
 };
 
 export default function RootLayout({
