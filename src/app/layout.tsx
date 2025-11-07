@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@/context/ThemeProvider";
 import "./globals.css";
+import Header from "@/components/Layout/header";
+import Footer from "@/components/Layout/fotter";
 
 // Geist font
 const geistSans = Geist({
@@ -37,6 +40,10 @@ export const metadata: Metadata = {
     "web development",
     "responsive design",
     "frontend engineer",
+    "Yousef Osama",
+    "Yousef Osama Portfolio",
+    "devbyyou",
+    "dev by you"
   ],
   authors: [{ name: "Yousef Osama" }],
   creator: "Yousef Osama",
@@ -97,11 +104,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className="transition">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

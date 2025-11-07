@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #0080FF;
+  --color-secondary: #0072E4;
+  --color-dark: #0A0A1A;
+  --color-light: #F0F0F0;
+}
+
+body * {
+  @apply transition-colors duration-200;
+}
+
+
+.light {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+.dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
