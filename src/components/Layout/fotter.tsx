@@ -29,9 +29,9 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-primary text-white backdrop-blur-sm mt-8">
+    <footer className="w-full bg-primary text-white backdrop-blur-sm h-16 flex items-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center gap-4 py-6">
+        <div className="flex justify-between items-center gap-4">
 
           <div className="flex items-center gap-2">
             <HiCode className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center sm:justify-end items-center gap-3 sm:gap-4">
             {socialLinks.map(({ href, label, icon: Icon, external }) =>
               external ? (
-                <Link
+                <a
                   key={href}
                   href={href}
                   target="_blank"
@@ -53,7 +53,7 @@ export default function Footer() {
                 >
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span className="hidden sm:inline">{label}</span>
-                </Link>
+                </a>
               ) : (
                 <Link
                   key={href}

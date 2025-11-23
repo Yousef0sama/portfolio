@@ -38,7 +38,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-primary text-white backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full bg-primary text-white backdrop-blur-sm h-16">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Navigation Links - Left Side */}
