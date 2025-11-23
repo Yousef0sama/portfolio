@@ -48,9 +48,9 @@ export default function Home() {
 
       {/* Right Image Side */}
       <div className="flex-1 flex justify-center items-center">
-        <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
+        <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 animate-float">
           <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl animate-pulse-slow" />
-          <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl ring-4 ring-primary/20 dark:ring-primary/10 animate-float">
+          <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl ring-4 ring-primary/20 dark:ring-primary/10">
             <Image
               src="/profile.jpg"
               alt="Yousef Osama - Frontend Developer Profile Photo"
