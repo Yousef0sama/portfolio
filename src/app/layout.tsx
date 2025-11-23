@@ -106,11 +106,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="transition">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <ThemeProvider>
           <Header />
-          {children}
+          <main className="flex-1">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
