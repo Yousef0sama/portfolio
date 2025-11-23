@@ -69,7 +69,7 @@ export const metadata: Metadata = {
       "Frontend developer specializing in React, Next.js, TypeScript, and modern web technologies. View my portfolio of projects and experience.",
     images: [
       {
-        url: "/og-image.png",
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
         alt: "Yousef Osama - Frontend Developer Portfolio",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     title: "Frontend Developer Portfolio | Yousef Osama",
     description:
       "Frontend developer specializing in React, Next.js, TypeScript, and modern web technologies.",
-    images: ["/og-image.png"],
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/og-image.png`],
   },
   alternates: {
     canonical: process.env.NEXT_PUBLIC_SITE_URL || undefined,
