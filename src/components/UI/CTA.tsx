@@ -15,6 +15,7 @@ interface CTAProps {
   disabled?: boolean;
   ariaLabel?: string;
   title?: string;
+  download?: boolean;
 }
 
 export default function CTA({
@@ -29,6 +30,7 @@ export default function CTA({
   disabled = false,
   ariaLabel,
   title,
+  download = false,
 }: CTAProps) {
   const baseStyles =
     "inline-flex items-center justify-center font-medium rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100";
@@ -103,6 +105,7 @@ export default function CTA({
       className={combinedClassName}
       aria-label={ariaLabelValue}
       title={title}
+      download={download}
     >
       {children}
     </Link>

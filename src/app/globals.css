@@ -1,14 +1,12 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-primary: #0080FF;
   --color-secondary: #0072E4;
   --color-dark: #0A0A1A;
   --color-light: #F0F0F0;
-}
-
-body * {
-  @apply transition-colors duration-200;
 }
 
 

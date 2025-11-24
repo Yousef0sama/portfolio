@@ -52,7 +52,7 @@ export default function Footer() {
                   className="flex items-center gap-2 text-sm sm:text-base font-medium transition-all duration-300 hover:scale-105"
                 >
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                  <span className="hidden sm:inline">{label}</span>
+                  <span className="sr-only sm:not-sr-only">{label}</span>
                 </a>
               ) : (
                 <Link
@@ -62,7 +62,7 @@ export default function Footer() {
                   className="flex items-center gap-2 text-sm sm:text-base font-medium transition-all duration-300 hover:scale-105"
                 >
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                  <span className="hidden sm:inline">{label}</span>
+                  <span className="sr-only sm:not-sr-only">{label}</span>
                 </Link>
               )
             )}

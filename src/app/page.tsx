@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CTA from "@/components/UI/CTA";
+import { FaDownload } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -35,13 +36,14 @@ export default function Home() {
           </CTA>
 
           <CTA
-            href="/projects"
-            variant='secondary'
+            href="/Yousef_Osama_CV.pdf"
+            variant="secondary"
             size="lg"
-            ariaLabel="View my portfolio projects"
-            title="Explore my work and projects"
+            ariaLabel="Download my CV"
+            title="Download my resume"
+            download= {true}
           >
-            View Projects
+            <FaDownload /> &nbsp; Download CV
           </CTA>
         </div>
       </div>
