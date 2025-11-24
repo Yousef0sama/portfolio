@@ -5,6 +5,30 @@ import { FaStar } from "react-icons/fa";
 import { skills } from "@/data/skills";
 import { reviews } from "@/data/testimonials";
 
+export const metadata = {
+  title: "About Me | Yousef Osama - Frontend Developer",
+  description:
+    "Learn more about Yousef Osama — a frontend developer specializing in React, Next.js, TypeScript, and modern web development.",
+
+  openGraph: {
+    title: "About Me | Yousef Osama - Frontend Developer",
+    description:
+      "Discover who Yousef Osama is, his frontend expertise, skills, and professional background.",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/about`,
+  },
+
+  twitter: {
+    title: "About Me | Yousef Osama",
+    description:
+      "Learn more about frontend developer Yousef Osama and his experience with React, Next.js, and TypeScript.",
+  },
+
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/about`,
+  },
+};
+
+
 export default function AboutPage() {
 
   return (
