@@ -21,23 +21,27 @@ function CategoriesFetchUI({ categories, skills }: Props) {
 }
 
 export default async function CategoriesFetch() {
-  const [catsRes, skillsRes] = await Promise.all([
-    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/categories`, {
-      headers: { "Cache-Control": "public, s-maxage=86400" },
-      next: {revalidate: 86400}
-    }),
-    fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/skills`, {
-      headers: { "Cache-Control": "public, s-maxage=86400" },
-      next: {revalidate: 86400}
-    }),
-  ]);
+  let categories: Categories[] = [];
+  let skills: Skills[] = [];
 
-  if (!catsRes.ok || !skillsRes.ok) {
-    throw new Error("Failed to fetch categories or skills");
+  try {
+    const [catsRes, skillsRes] = await Promise.all([
+      fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/categories`, {
+        headers: { "Cache-Control": "public, s-maxage=86400" },
+        next: { revalidate: 86400 }
+      }),
+      fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/skills`, {
+        headers: { "Cache-Control": "public, s-maxage=86400" },
+        next: { revalidate: 86400 }
+      }),
+    ]);
+
+    categories = await catsRes.json();
+    skills = await skillsRes.json();
+  } catch (error) {
+    console.error("Failed to fetch categories or skills", error);
   }
 
-  const categories: Categories[] = await catsRes.json();
-  const skills: Skills[] = await skillsRes.json();
 
   return <CategoriesFetchUI categories={categories} skills={skills} />;
 }
