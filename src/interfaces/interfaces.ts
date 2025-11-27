@@ -1,5 +1,12 @@
-export interface SkillsCategory {
-  [category: string]: string[];
+export interface Skills {
+  id: number;
+  skill: string;
+  category_id: number;
+}
+
+export interface Categories {
+  id: number;
+  category: string;
 }
 
 export interface Review {
@@ -8,4 +15,15 @@ export interface Review {
   sourceLink: string;
   comment: string;
   rating: number;
+}
+
+export interface Projects {
+  id: number;
+  title: string;
+  description: string;
+  thumbnail: string;
+  gallery: string[];
+  skills: Skills[];
+  date: string;
+  url: string;
 }

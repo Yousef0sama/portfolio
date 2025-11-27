@@ -2,8 +2,8 @@ import Card from "@/components/UI/card";
 import Image from "next/image";
 import { BiSolidLike, BiSolidShare, BiSolidCommentDetail } from "react-icons/bi";
 import { FaStar } from "react-icons/fa";
-import { skills } from "@/data/skills";
 import { reviews } from "@/data/testimonials";
+import CategoriesFetch from "@/components/fetch/categoriesFetch";
 
 export const metadata = {
   title: "About Me | Yousef Osama - Frontend Developer",
@@ -92,33 +92,13 @@ export default function AboutPage() {
       >
         <h2
           id="skills-heading"
-          className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900 dark:text-white"
+          className="text-3xl sm:text-4xl font-bold mb-12 text-center text-primary"
         >
           Skills & Technologies
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {Object.entries(skills).map(([title, items]) => (
-            <Card
-              key={title}
-              as={"article"}
-            >
-              <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white border-b border-gray-300 dark:border-gray-700 pb-2">
-                {title}
-              </h3>
-              <ul className="flex flex-wrap gap-2">
-                {items.map((skill) => (
-                  <li
-                    key={skill}
-                    className="px-3 py-1.5 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary/90 text-sm font-medium transition-all duration-200 hover:bg-primary/20 dark:hover:bg-primary/30 hover:scale-105"
-                  >
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          ))}
-        </div>
+        <CategoriesFetch />
+
       </section>
 
       <section
@@ -128,7 +108,7 @@ export default function AboutPage() {
       >
         <h2
           id="reviews-heading"
-          className="text-3xl sm:text-4xl font-bold mb-12 text-center text-gray-900 dark:text-white"
+          className="text-3xl sm:text-4xl font-bold mb-12 text-center text-primary"
         >
           Reviews
         </h2>
