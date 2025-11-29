@@ -33,7 +33,7 @@ export default function Project({project} : ProjectI) {
         <p className="mb-6">{description.substring(0,endText)}...</p>
 
         <footer className="flex justify-end">
-          <span className="text-primary bg-primary/10 rounded-full px-3 py-2">{date}</span>
+          <time dateTime={date} className="text-primary bg-primary/10 rounded-full px-3 py-2">{date}</time>
         </footer>
       </Link>
 

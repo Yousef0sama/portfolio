@@ -9,6 +9,9 @@
   --color-light: #F0F0F0;
 }
 
+* {
+  user-select: none;
+}
 
 .light {
   background-color: var(--color-light);
