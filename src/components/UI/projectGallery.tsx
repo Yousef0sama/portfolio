@@ -43,6 +43,8 @@ export default function ProjectGallery({ images, title }: { images: string[], ti
         {/* LEFT ARROW */}
         <button
           onClick={scrollPrev}
+          aria-label="slide to left"
+          title="slide to left"
           className="absolute hidden md:block cursor-pointer top-1/2 left-0 -translate-y-1/2 hover:bg-primary/40 text-primary/40 dark:text-primary/80 hover:text-white p-2 rounded-full"
         >
           <FaArrowLeft />
@@ -51,6 +53,8 @@ export default function ProjectGallery({ images, title }: { images: string[], ti
         {/* RIGHT ARROW */}
         <button
           onClick={scrollNext}
+          aria-label="slide to right"
+          title="slide to right"
           className="absolute hidden md:block cursor-pointer top-1/2 right-0 -translate-y-1/2 hover:bg-primary/40 text-primary/40 dark:text-primary/80 hover:text-white p-2 rounded-full"
         >
           <FaArrowRight/>
