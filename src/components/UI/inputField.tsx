@@ -33,9 +33,9 @@ export default function InputField({
   return (
     <div className={`flex flex-col gap-1 ${className}`}>
       {label && (
-        <label htmlFor={id} className="text-sm font-medium text-gray-800">
+        <label htmlFor={id} className="text-sm font-medium">
           {label}
-          {required && <span className="text-red-600 ms-1">*</span>}
+          {required && <span className="text-red-600 dark:text-red-400 ms-1">*</span>}
         </label>
       )}
 
