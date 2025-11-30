@@ -1,4 +1,6 @@
 import ProjectsFetch from "@/components/fetch/projectsFetch"
+import getAllProjects from "@/utils/getAllProjects";
+import Head from "next/head";
 
 export const metadata = {
   title: "Projects | Yousef Osama - Frontend Developer",
@@ -23,14 +25,55 @@ export const metadata = {
   },
 };
 
+export default async function Page() {
 
-export default function Page() {
+  const projects = await getAllProjects();
+
   return (
-    <main className="flex-1 container mx-auto px-4 py-12 sm:px-6 sm:py-20 min-h-[calc(100vh-8rem)]">
-      <h1 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-primary">Projects</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        <ProjectsFetch />
-      </div>
-    </main>
+    <>
+      <Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Portfolio Projects of Yousef Osama",
+            "url": `${process.env.NEXT_PUBLIC_SITE_URL}/projects`,
+            "description": "Frontend developer specializing in React, Next.js, TypeScript, and modern web development.",
+            "author": {
+              "@type": "Person",
+              "name": "Yousef Osama",
+              "url": `${process.env.NEXT_PUBLIC_SITE_URL}/about`
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Yousef Osama"
+            },
+            "itemListElement": projects.map((proj, idx) => ({
+              "@type": "ListItem",
+              "position": idx + 1,
+              "item": {
+                "@type": "CreativeWork",
+                "name": proj.title,
+                "url": `${process.env.NEXT_PUBLIC_SITE_URL}/projects/${proj.slug}`,
+                "description": `A modern frontend project showcasing ${proj.title}, built with up-to-date web technologies by Yousef Osama.`,
+                "image": proj.thumbnail,
+                "datePublished": proj.date,
+                "keywords": proj.skills?.join(", ") || "",
+              }
+            }))
+          }),
+        }}
+      />
+      </Head>
+
+      <main className="flex-1 container mx-auto px-4 py-12 sm:px-6 sm:py-20 min-h-[calc(100vh-8rem)]">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-primary">Projects</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <ProjectsFetch projects={projects} />
+        </div>
+      </main>
+    </>
   )
 }

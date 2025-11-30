@@ -1,6 +1,30 @@
-"use client";
-
 import Link from "next/link";
+
+export const metadata = {
+  title: "message failed | Yousef Osama - Frontend Developer",
+
+  openGraph: {
+    title: "message failed | Yousef Osama - Frontend Developer",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/contact/error`,
+  },
+
+  twitter: {
+    title: "message failed | Yousef Osama",
+    },
+
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/contact/error`,
+  },
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  }
+};
+
 
 export default function Page() {
   return (

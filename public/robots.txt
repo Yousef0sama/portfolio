@@ -1,0 +1,16 @@
+# robots.txt for Yousef Osama portfolio
+
+# Allow all search engines full access except the disallowed paths
+User-agent *
+Disallow: /contact/success
+Disallow: /contact/error
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+Allow: /
+
+# Sitemap location
+Sitemap: https://devbyyou.netlify.app/sitemap.xml
+
+#Host
+Host: https://devbyyou.netlify.app/

@@ -1,5 +1,30 @@
 import Link from "next/link"
 
+export const metadata = {
+  title: "message sent | Yousef Osama - Frontend Developer",
+
+  openGraph: {
+    title: "message sent | Yousef Osama - Frontend Developer",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/contact/success`,
+  },
+
+  twitter: {
+    title: "message sent | Yousef Osama",
+    },
+
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/contact/success`,
+  },
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  }
+};
+
 export default function Page() {
   return (
     <main className="flex-1 container mx-auto px-4 py-20 text-center">

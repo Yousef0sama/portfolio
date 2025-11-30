@@ -26,4 +26,5 @@ export interface Projects {
   skills: Skills[];
   date: string;
   url: string;
+  slug: string;
 }

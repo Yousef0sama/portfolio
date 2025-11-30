@@ -10,14 +10,14 @@ type ProjectI = {
 
 export default function Project({project} : ProjectI) {
 
-  const {id, title, description, thumbnail, date} = project;
+  const {title, description, thumbnail, date, slug} = project;
 
   const endText = description[99] === " " ? 99 : 100
 
   return (
     <Card as={"article"} hoverEffect shadow="soft" className="max-w-xs mx-auto sm:mx-0">
 
-      <Link href={`projects/${id}`}>
+      <Link href={`projects/${slug}`}>
         <header className="flex flex-col gap-4 mb-3">
           <Image
             src={thumbnail}
