@@ -1,6 +1,5 @@
 import Card from "@/components/UI/card";
 import Form from "@/components/UI/form";
-import Head from "next/head";
 
 
 export const metadata = {
@@ -32,28 +31,26 @@ export default function Page() {
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ContactPage",
-              "name": "Contact Yousef Osama",
-              "url": `${process.env.NEXT_PUBLIC_SITE_URL}/contact`,
-              "mainEntityOfPage": {
-                "@type": "Person",
-                "name": "Yousef Osama",
-                "email": "mailto:devbyyousef@example.com",
-                "sameAs": [
-                  "https://github.com/Yousef0sama",
-                  "https://www.linkedin.com/in/yousef-osama-652667380"
-                ]
-              }
-            }),
-          }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Yousef Osama",
+            "url": `${process.env.NEXT_PUBLIC_SITE_URL}/contact`,
+            "mainEntityOfPage": {
+              "@type": "Person",
+              "name": "Yousef Osama",
+              "email": "mailto:devbyyousef@example.com",
+              "sameAs": [
+                "https://github.com/Yousef0sama",
+                "https://www.linkedin.com/in/yousef-osama-652667380"
+              ]
+            }
+          }),
+        }}
+      />
 
       <main className="flex-1 container mx-auto px-4 py-12 sm:px-6 sm:py-20 min-h-[calc(100vh-8rem)]">
         <h1 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-primary">

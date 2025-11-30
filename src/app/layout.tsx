@@ -4,7 +4,6 @@ import { ThemeProvider } from "@/context/ThemeProvider";
 import "./globals.css";
 import Header from "@/components/Layout/header";
 import Footer from "@/components/Layout/fotter";
-import Head from "next/head";
 
 // Geist font
 const geistSans = Geist({
@@ -106,9 +105,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="transition">
-      <Head>
+      <head>
         <meta name="google-site-verification" content="mNL-y-12PKLRgeiIgGZ__fKs5ZOmjbvoa2AAA8kzr0g" />
-      </Head>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >

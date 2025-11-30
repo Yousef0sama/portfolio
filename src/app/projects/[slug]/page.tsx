@@ -1,6 +1,5 @@
 import type { Projects } from "@/interfaces/interfaces";
 import Link from "next/link";
-import Head from "next/head";
 import getAllProjects from "@/utils/getAllProjects";
 import ProjectGallery from "@/components/UI/projectGallery";
 import Skills from "@/components/fetch/skillsFetch";
@@ -62,32 +61,30 @@ export default async function ProjectPage({ params }: {  params: Promise<{ slug:
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "CreativeWork",
-              "name": project.title,
-              "url": `${process.env.NEXT_PUBLIC_SITE_URL}/projects/${project.slug}`,
-              "description": `A modern frontend project showcasing ${project.title}, built with up-to-date web technologies by Yousef Osama.`,
-              "image": project.thumbnail,
-              "datePublished": project.date,
-              "author": {
-                "@type": "Person",
-                "name": "Yousef Osama",
-                "url": `${process.env.NEXT_PUBLIC_SITE_URL}/about`
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "Yousef Osama"
-              },
-              "keywords": project.skills.join(", "),
-            }),
-          }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": project.title,
+            "url": `${process.env.NEXT_PUBLIC_SITE_URL}/projects/${project.slug}`,
+            "description": `A modern frontend project showcasing ${project.title}, built with up-to-date web technologies by Yousef Osama.`,
+            "image": project.thumbnail,
+            "datePublished": project.date,
+            "author": {
+              "@type": "Person",
+              "name": "Yousef Osama",
+              "url": `${process.env.NEXT_PUBLIC_SITE_URL}/about`
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Yousef Osama"
+            },
+            "keywords": project.skills.join(", "),
+          }),
+        }}
+      />
 
       <main className="flex-1 container mx-auto px-4 py-12 sm:px-6 sm:py-20 min-h-[calc(100vh-8rem)]">
         <div className="flex flex-col-reverse md:flex-row gap-6 max-w-6xl mx-auto">

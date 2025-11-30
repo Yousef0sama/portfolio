@@ -1,6 +1,5 @@
 import ProjectsFetch from "@/components/fetch/projectsFetch"
 import getAllProjects from "@/utils/getAllProjects";
-import Head from "next/head";
 
 export const metadata = {
   title: "Projects | Yousef Osama - Frontend Developer",
@@ -31,7 +30,6 @@ export default async function Page() {
 
   return (
     <>
-      <Head>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -66,7 +64,6 @@ export default async function Page() {
           }),
         }}
       />
-      </Head>
 
       <main className="flex-1 container mx-auto px-4 py-12 sm:px-6 sm:py-20 min-h-[calc(100vh-8rem)]">
         <h1 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-primary">Projects</h1>

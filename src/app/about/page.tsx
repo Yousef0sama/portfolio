@@ -1,5 +1,4 @@
 import Card from "@/components/UI/card";
-import Head from "next/head";
 import Image from "next/image";
 import { BiSolidLike, BiSolidShare, BiSolidCommentDetail } from "react-icons/bi";
 import { FaStar } from "react-icons/fa";
@@ -34,40 +33,38 @@ export default function AboutPage() {
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Yousef Osama",
-              "url": `${process.env.NEXT_PUBLIC_SITE_URL}/about`,
-              "sameAs": [
-                "https://github.com/Yousef0sama",
-                "https://www.linkedin.com/in/yousef-osama-652667380"
-              ],
-              "worksFor": {
-                "@type": "Organization",
-                "name": "Freelance / Self-employed",
-              },
-              "jobTitle": "Frontend Developer",
-              "knowsAbout": [
-                "React",
-                "Next.js",
-                "TypeScript",
-                "Tailwind CSS",
-                "Bootstrap",
-                "Redux.js",
-                "Responsive Web Design",
-                "Frontend Performance Optimization"
-              ],
-              "image": `${process.env.NEXT_PUBLIC_SITE_URL}/profile.jpg`,
-              "description": "Frontend developer specializing in React, Next.js, TypeScript, and modern web development."
-            }),
-          }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Yousef Osama",
+            "url": `${process.env.NEXT_PUBLIC_SITE_URL}/about`,
+            "sameAs": [
+              "https://github.com/Yousef0sama",
+              "https://www.linkedin.com/in/yousef-osama-652667380"
+            ],
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Freelance / Self-employed",
+            },
+            "jobTitle": "Frontend Developer",
+            "knowsAbout": [
+              "React",
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "Bootstrap",
+              "Redux.js",
+              "Responsive Web Design",
+              "Frontend Performance Optimization"
+            ],
+            "image": `${process.env.NEXT_PUBLIC_SITE_URL}/profile.jpg`,
+            "description": "Frontend developer specializing in React, Next.js, TypeScript, and modern web development."
+          }),
+        }}
+      />
 
       <main className="flex-1 min-h-[calc(100vh-8rem)]">
         <section

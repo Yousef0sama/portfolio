@@ -1,35 +1,32 @@
 import Image from "next/image";
-import Head from "next/head";
 import CTA from "@/components/UI/CTA";
 import { FaDownload } from "react-icons/fa";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "name": "Yousef Osama - Frontend Developer",
-              "url": `${process.env.NEXT_PUBLIC_SITE_URL}/`,
-              "description": "Frontend developer specializing in React, Next.js, TypeScript, and modern web technologies. View my portfolio of projects, skills, and experience in building beautiful, responsive web applications.",
-              "inLanguage": "en",
-              "author": {
-                "@type": "Person",
-                "name": "Yousef Osama",
-                "url": `${process.env.NEXT_PUBLIC_SITE_URL}/`
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "Yousef Osama",
-              }
-            }),
-          }}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Yousef Osama - Frontend Developer",
+            "url": `${process.env.NEXT_PUBLIC_SITE_URL}/`,
+            "description": "Frontend developer specializing in React, Next.js, TypeScript, and modern web technologies. View my portfolio of projects, skills, and experience in building beautiful, responsive web applications.",
+            "inLanguage": "en",
+            "author": {
+              "@type": "Person",
+              "name": "Yousef Osama",
+              "url": `${process.env.NEXT_PUBLIC_SITE_URL}/`
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Yousef Osama",
+            }
+          }),
+        }}
         />
-      </Head>
       <main className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 flex flex-col-reverse lg:flex-row justify-center items-center gap-12 lg:gap-16 min-h-[calc(100vh-8rem)]">
 
         {/* Left Text Side */}
