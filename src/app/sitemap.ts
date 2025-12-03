@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import getAllProjects from "@/utils/getAllProjects";
 import type { Projects } from "@/interfaces/interfaces";
 

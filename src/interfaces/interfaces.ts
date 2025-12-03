@@ -10,6 +10,7 @@ export interface Categories {
 }
 
 export interface Review {
+  id: number;
   name: string;
   source: string;
   sourceLink: string;

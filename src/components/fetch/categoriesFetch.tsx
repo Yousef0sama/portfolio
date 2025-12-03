@@ -1,5 +1,7 @@
 import Category from "../UI/category";
 import type { Skills, Categories } from "@/interfaces/interfaces";
+import getAllCategories from "@/utils/getAllCategories";
+import getAllSkills from "@/utils/getAllSkills";
 
 type Props = {
   categories: Categories[];
@@ -21,26 +23,8 @@ function CategoriesFetchUI({ categories, skills }: Props) {
 }
 
 export default async function CategoriesFetch() {
-  let categories: Categories[] = [];
-  let skills: Skills[] = [];
-
-  try {
-    const [catsRes, skillsRes] = await Promise.all([
-      fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/categories`, {
-        headers: { "Cache-Control": "public, s-maxage=86400" },
-        next: { revalidate: 86400 }
-      }),
-      fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/skills`, {
-        headers: { "Cache-Control": "public, s-maxage=86400" },
-        next: { revalidate: 86400 }
-      }),
-    ]);
-
-    categories = await catsRes.json();
-    skills = await skillsRes.json();
-  } catch (error) {
-    console.error("Failed to fetch categories or skills", error);
-  }
+  const categories: Categories[] = await getAllCategories();
+  const skills: Skills[] = await getAllSkills();
 
 
   return <CategoriesFetchUI categories={categories} skills={skills} />;

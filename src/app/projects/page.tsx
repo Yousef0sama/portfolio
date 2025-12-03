@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import ProjectsFetch from "@/components/fetch/projectsFetch"
 import getAllProjects from "@/utils/getAllProjects";
 
