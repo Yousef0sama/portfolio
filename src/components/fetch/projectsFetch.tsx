@@ -1,17 +1,28 @@
-import type { Projects } from "@/interfaces/interfaces";
+// imports
+
+// components
 import Project from "../UI/project";
 
-type Props = {
-  projects: Projects[];
-};
+// interfaces
+import type { Project as ProjectType } from "@/interfaces/interfaces";
 
-export default function ProjectsFetch({ projects }: Props) {
+/**
+ * ProjectsFetch component
+ *
+ * Renders a list of Project components based on the provided projects array.
+ *
+ * @param {Object} props - Component props
+ * @param {ProjectType[]} props.projects - Array of projects to display
+ * @returns {React.JSX.Element} A fragment containing the rendered Project components
+*/
+
+export default function ProjectsFetch({ projects }: { projects: ProjectType[] }): React.JSX.Element {
   return (
     <>
+      {/* Map through each project and render a Project component */}
       {projects.map((project) => (
         <Project key={project.id} project={project} />
       ))}
     </>
   );
 }
-

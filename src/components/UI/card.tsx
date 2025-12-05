@@ -1,17 +1,17 @@
-import { ElementType, JSX, ReactNode } from "react";
-
+// interfaces
 type PaddingSize = "none" | "sm" | "md" | "lg";
 type ShadowSize = "none" | "soft" | "medium" | "strong";
 
 interface CardProps {
-  children: ReactNode;
-  as?: keyof JSX.IntrinsicElements | ElementType;
+  children: React.ReactNode;
+  as?: keyof React.JSX.IntrinsicElements | React.ElementType;
   className?: string;
   hoverEffect?: boolean;
   padding?: PaddingSize;
   shadow?: ShadowSize;
 }
 
+// paddings
 const paddingMap: Record<PaddingSize, string> = {
   none: "p-0",
   sm: "p-4",
@@ -19,6 +19,7 @@ const paddingMap: Record<PaddingSize, string> = {
   lg: "p-8",
 };
 
+// shadows
 const shadowMap: Record<ShadowSize, string> = {
   none: "shadow-none dark:shadow-none",
   soft:
@@ -29,12 +30,20 @@ const shadowMap: Record<ShadowSize, string> = {
     "shadow-[0_25px_55px_rgba(15,23,42,0.18)] dark:shadow-[0_30px_65px_rgba(0,0,0,0.55)]",
 };
 
+// base class
 const baseClasses =
   "relative rounded-3xl border border-black/5 bg-white/90 text-gray-900 backdrop-blur-sm transition-all duration-300 dark:border-white/10 dark:bg-gray-900/80 dark:text-gray-100";
 
+  // hover effect
 const hoverClasses =
-  "hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(15,23,42,0.18)] dark:hover:shadow-[0_35px_75px_rgba(0,0,0,0.65)]";
+  "hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(15,23,42,0.2)] dark:hover:shadow-[0_35px_75px_rgba(0,0,0,0.65)]";
 
+/**
+ * Flexible Card component supporting custom tags, padding, shadow levels, and hover effects.
+ *
+ * @param {CardProps} props - Card configuration and content
+ * @returns {React.JSX.Element} Styled Card wrapper
+ */
 export default function Card({
   children,
   as: Tag = "div",
@@ -42,7 +51,7 @@ export default function Card({
   hoverEffect,
   padding = "md",
   shadow = "none",
-}: CardProps) {
+}: CardProps): React.JSX.Element {
   return (
     <Tag
       className={[
@@ -64,4 +73,3 @@ export default function Card({
     </Tag>
   );
 }
-

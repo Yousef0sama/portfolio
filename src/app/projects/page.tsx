@@ -1,13 +1,18 @@
+// Force dynamic rendering for this page
 export const dynamic = "force-dynamic";
 
-import ProjectsFetch from "@/components/fetch/projectsFetch"
+// Imports
+
+// components
+import ProjectsFetch from "@/components/fetch/projectsFetch";
+
+// utils
 import getAllProjects from "@/utils/getAllProjects";
 
+// Metadata for SEO, OpenGraph, and Twitter cards
 export const metadata = {
   title: "Projects | Yousef Osama - Frontend Developer",
-  description:
-    "Explore the portfolio of Yousef Osama — frontend developer specializing in React, Next.js, TypeScript, and modern web applications.",
-
+  description: "Explore the portfolio of Yousef Osama — frontend developer specializing in React, Next.js, TypeScript, and modern web applications.",
   openGraph: {
     title: "Projects | Yousef Osama - Frontend Developer",
     description:
@@ -26,12 +31,14 @@ export const metadata = {
   },
 };
 
+// Main Page Component
 export default async function Page() {
-
+  // Fetch all projects from the backend / CMS
   const projects = await getAllProjects();
 
   return (
     <>
+      {/* JSON-LD structured data for SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -67,8 +74,14 @@ export default async function Page() {
         }}
       />
 
+      {/* Main content */}
       <main className="flex-1 container mx-auto px-4 py-12 sm:px-6 sm:py-20 min-h-[calc(100vh-8rem)]">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-primary">Projects</h1>
+        {/* Page Title */}
+        <h1 className="text-3xl sm:text-4xl font-bold mb-12 text-center text-primary">
+          Projects
+        </h1>
+
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <ProjectsFetch projects={projects} />
         </div>

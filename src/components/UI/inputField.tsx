@@ -1,4 +1,4 @@
-
+// interfaces
 
 interface BaseProps {
   label?: string;
@@ -11,9 +11,16 @@ interface BaseProps {
   id: string;
   placeholder: string;
   value: string;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
+/**
+ * A reusable input field component supporting both input and textarea.
+ * Handles labels, validation states, accessibility attributes, and error messages.
+ *
+ * @param {BaseProps} props - The configuration for rendering the input field.
+ * @returns {React.JSX.Element} The rendered input or textarea element.
+ */
 export default function InputField({
   label,
   name,
@@ -26,7 +33,8 @@ export default function InputField({
   value,
   handleChange,
   placeholder,
-}: BaseProps) {
+}: BaseProps): React.JSX.Element {
+
   const errorId = `${id}-error`;
   const InputTag = textarea ? "textarea" : "input";
 

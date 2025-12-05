@@ -1,20 +1,41 @@
 "use client";
 
+// imports
+
+// hooks
 import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+
+// components
 import Image from "next/image";
+
+// icons
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-export default function ProjectGallery({ images, title }: { images: string[], title: string }) {
+// interfaces
+interface ProjectGalleryI {
+  images: string[];
+  title: string;
+}
+
+/**
+ * Project gallery component.
+ *
+ * Displays a main carousel of project images with navigational arrows
+ * and a synced thumbnail carousel below.
+ *
+ * @param {Object} props - Component props.
+ * @param {string[]} props.images - Array of image URLs to display.
+ * @param {string} props.title - The title of the project (used for alt text).
+ * @returns {React.JSX.Element} The rendered project gallery component.
+ */
+export default function ProjectGallery({ images, title }: ProjectGalleryI): React.JSX.Element {
   const [emblaRef, emblaApi] = useEmblaCarousel();
   const [thumbRef, thumbApi] = useEmblaCarousel({ dragFree: true });
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
-
-  const scrollTo = (i: number) => {
-    emblaApi?.scrollTo(i);
-  };
+  const scrollTo = (i: number) => emblaApi?.scrollTo(i);
 
   // Sync main slider with thumbnail slider
   emblaApi?.on("select", () => {
@@ -57,7 +78,7 @@ export default function ProjectGallery({ images, title }: { images: string[], ti
           title="Next slide"
           className="absolute hidden md:block cursor-pointer top-1/2 right-0 -translate-y-1/2 hover:bg-primary/40 text-primary/40 dark:text-primary/80 hover:text-white p-2 rounded-full"
         >
-          <FaArrowRight/>
+          <FaArrowRight />
         </button>
       </div>
 
@@ -69,7 +90,7 @@ export default function ProjectGallery({ images, title }: { images: string[], ti
               key={i}
               onClick={() => scrollTo(i)}
               aria-label={`Go to slide number ${i + 1}`}
-              title={` Go to slide number ${i + 1}`}
+              title={`Go to slide number ${i + 1}`}
               className="min-w-[80px] h-[60px] rounded-xl overflow-hidden cursor-pointer"
               tabIndex={0}
             >

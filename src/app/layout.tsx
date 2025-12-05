@@ -1,11 +1,12 @@
+// Imports
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "@/context/ThemeProvider";
+import ThemeProvider from "@/context/ThemeProvider";
 import "./globals.css";
 import Header from "@/components/Layout/header";
 import Footer from "@/components/Layout/fotter";
 
-// Geist font
+// Geist font (Sans)
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -19,7 +20,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-// Metadata
+// Metadata for SEO, social previews, and general page info
 export const metadata: Metadata = {
   metadataBase: process.env.NEXT_PUBLIC_SITE_URL
     ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
@@ -94,10 +95,14 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
-    shortcut: "/favicon.ico"
+    shortcut: "/favicon.ico",
   }
 };
 
+/**
+ * RootLayout component
+ * Wraps the entire app with html, body, ThemeProvider, header, and footer.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -106,15 +111,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="transition">
       <head>
-        <meta name="google-site-verification" content="mNL-y-12PKLRgeiIgGZ__fKs5ZOmjbvoa2AAA8kzr0g" />
+        {/* Google site verification */}
+        <meta
+          name="google-site-verification"
+          content="mNL-y-12PKLRgeiIgGZ__fKs5ZOmjbvoa2AAA8kzr0g"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        {/* Theme provider wraps header, children, and footer */}
         <ThemeProvider>
-          <Header />
-          {children}
-          <Footer />
+          <Header />   {/* Navigation header */}
+          {children}   {/* Page content */}
+          <Footer />   {/* Footer with social links */}
         </ThemeProvider>
       </body>
     </html>

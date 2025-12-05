@@ -1,10 +1,12 @@
 "use client";
 
+// imports
+
+// components
 import Link from "next/link";
-import { ReactNode } from "react";
 
 interface CTAProps {
-  children: ReactNode;
+  children: React.ReactNode;
   href?: string;
   onClick?: () => void;
   type?: "submit" | "button" | "reset";
@@ -18,6 +20,17 @@ interface CTAProps {
   download?: boolean;
 }
 
+/**
+ * Reusable CTA component that can render:
+ * - A button
+ * - An internal Next.js Link
+ * - An external anchor link
+ *
+ * Supports variants, sizes, disabled state, and auto-generated aria-labels.
+ *
+ * @param {CTAProps} props - CTA configuration and children
+ * @returns {React.JSX.Element} The rendered CTA element
+ */
 export default function CTA({
   children,
   href,
@@ -31,10 +44,13 @@ export default function CTA({
   ariaLabel,
   title,
   download = false,
-}: CTAProps) {
+}: CTAProps): React.JSX.Element {
+
+  // Base styling applied to all CTA types
   const baseStyles =
     "inline-flex items-center justify-center font-medium rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100";
 
+  // Style based on variant (primary / secondary)
   const variantStyles = {
     primary:
       "bg-primary text-white hover:bg-secondary focus:ring-primary",
@@ -42,15 +58,22 @@ export default function CTA({
       "border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary",
   };
 
+  // Size presets
   const sizeStyles = {
     sm: "px-4 py-2 text-sm",
     md: "px-6 py-3 text-base",
     lg: "px-8 py-4 text-lg",
   };
 
+  // Merge all styles
   const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
-  // Get aria-label from prop or generate from children text
+  /**
+   * Generate aria-label if not provided:
+   * - If children is text → use it
+   * - Otherwise → skip
+   * @returns {string | undefined}
+   */
   const getAriaLabel = () => {
     if (ariaLabel) return ariaLabel;
     if (typeof children === "string") return children;
@@ -59,7 +82,9 @@ export default function CTA({
 
   const ariaLabelValue = getAriaLabel();
 
-  // If it's a button
+  /**
+   * Case 1: Button (if onClick exists OR no href provided)
+   */
   if (onClick || !href) {
     return (
       <button
@@ -76,8 +101,11 @@ export default function CTA({
     );
   }
 
-  // If it's an external link
+  /**
+   * Case 2: External link (<a> tag)
+   */
   if (external) {
+    // Enhance aria-label for external links
     const externalAriaLabel =
       ariaLabelValue ||
       (typeof children === "string"
@@ -98,7 +126,9 @@ export default function CTA({
     );
   }
 
-  // If it's an internal link
+  /**
+   * Case 3: Internal link (Next.js <Link>)
+   */
   return (
     <Link
       href={href}
@@ -111,4 +141,3 @@ export default function CTA({
     </Link>
   );
 }
-

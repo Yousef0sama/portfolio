@@ -1,23 +1,25 @@
+// libs
 import validator from "validator";
 
-interface FormFields {
-  firstName: string;
-  lastName: string;
-  email: string;
-  message: string;
-}
+// interfaces
+import { FormFields, FormErrors } from "@/interfaces/interfaces";
 
-interface FormErrors {
-  firstName?: string;
-  lastName?: string;
-  email?: string;
-  message?: string;
-}
-
+/**
+ * Validates contact form fields.
+ *
+ * Checks:
+ * - First name: required, letters only, length 2–20
+ * - Last name: required, letters only, length 2–20
+ * - Email: required, valid
+ * - Message: required, length 10–500
+ *
+ * @param {FormFields} fields - The form fields to validate.
+ * @returns {FormErrors} An object containing validation error messages.
+ */
 export default function validateForm(fields: FormFields): FormErrors {
   const errors: FormErrors = {};
 
-  // ===== First Name =====
+  // Validate first name: required, letters only, length
   if (validator.isEmpty(fields.firstName)) {
     errors.firstName = "First Name is required";
   } else if (!validator.isAlpha(fields.firstName, "en-US")) {
@@ -26,7 +28,7 @@ export default function validateForm(fields: FormFields): FormErrors {
     errors.firstName = "First Name must be 2-20 characters";
   }
 
-  // ===== Last Name =====
+  // Validate last name: required, letters only, length
   if (validator.isEmpty(fields.lastName)) {
     errors.lastName = "Last Name is required";
   } else if (!validator.isAlpha(fields.lastName, "en-US")) {
@@ -35,14 +37,14 @@ export default function validateForm(fields: FormFields): FormErrors {
     errors.lastName = "Last Name must be 2-20 characters";
   }
 
-  // ===== Email =====
+  // Validate email: required, valid format
   if (validator.isEmpty(fields.email)) {
     errors.email = "Email is required";
   } else if (!validator.isEmail(fields.email)) {
     errors.email = "Enter a valid email";
   }
 
-  // ===== Message =====
+  // Validate message: required, length
   if (validator.isEmpty(fields.message)) {
     errors.message = "Message is required";
   } else if (!validator.isLength(fields.message, { min: 10, max: 500 })) {

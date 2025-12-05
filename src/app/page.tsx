@@ -1,10 +1,20 @@
+// imports
+
+// components
 import Image from "next/image";
 import CTA from "@/components/UI/CTA";
+
+// icons
 import { FaDownload } from "react-icons/fa";
 
-export default function Home() {
+/**
+ * Home page component showcasing the hero section.
+ * Includes introduction, CTA buttons, profile image, and structured data for SEO.
+ */
+export default function Page() {
   return (
     <>
+      {/* Structured Data for SEO: JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -26,14 +36,14 @@ export default function Home() {
             }
           }),
         }}
-        />
+      />
+
       <main className="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 flex flex-col-reverse lg:flex-row justify-center items-center gap-12 lg:gap-16 min-h-[calc(100vh-8rem)]">
 
-        {/* Left Text Side */}
+        {/* Left Side: Introduction Text */}
         <div className="flex-1 text-center lg:text-left max-w-2xl">
           <h1 className="text-3xl lg:text-4xl font-bold leading-tight mb-4 animate-fade-in">
-            Hi, I&apos;m{" "}
-            <span className="text-primary">Yousef Osama</span>
+            Hi, I&apos;m <span className="text-primary">Yousef Osama</span>
           </h1>
 
           <h2 className="text-xl sm:text-2xl lg:text-3xl text-secondary font-semibold mb-4 animate-fade-in-delay">
@@ -47,8 +57,8 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 animate-fade-in-delay-3">
-
-          <CTA
+            {/* Contact Button */}
+            <CTA
               href="/contact"
               variant="primary"
               size="lg"
@@ -58,23 +68,27 @@ export default function Home() {
               Contact Me
             </CTA>
 
+            {/* Download CV Button */}
             <CTA
               href="/Yousef_Osama_CV.pdf"
               variant="secondary"
               size="lg"
               ariaLabel="Download my CV"
               title="Download my resume"
-              download= {true}
+              download={true}
             >
               <FaDownload /> &nbsp; Download CV
             </CTA>
           </div>
         </div>
 
-        {/* Right Image Side */}
+        {/* Right Side: Profile Image */}
         <div className="flex-1 flex justify-center items-center">
           <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 animate-float">
+            {/* Background gradient glow */}
             <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl animate-pulse-slow" />
+
+            {/* Profile Image Container */}
             <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl ring-4 ring-primary/20 dark:ring-primary/10">
               <Image
                 src="/profile.jpg"
