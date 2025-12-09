@@ -69,7 +69,7 @@ export default function Card({
         className="pointer-events-none absolute inset-0 rounded-3xl bg-linear-to-br from-primary/10 to-secondary/10 opacity-0 blur-3xl transition-opacity duration-300 mix-blend-normal dark:mix-blend-screen"
       />
 
-      <div className="relative z-10">{children}</div>
+      <div className="relative z-10 h-full">{children}</div>
     </Tag>
   );
 }
